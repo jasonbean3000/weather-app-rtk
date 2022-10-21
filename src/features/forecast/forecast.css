@@ -1,8 +1,15 @@
 /* Photo by Engin Akyurt from Pexels */
+/* smoke Photo by James Wheeler from Pexels */
 .forecast-container {
-    background-image: url(../../resources/images/darkclouds.jpg);
+    animation: fadeIn 2s;
     background-size: cover;
     height: 100vh;
+    
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .search-form-container {
@@ -22,14 +29,18 @@ input {
 }
 
 .main-container {
-    margin-top: 2%;
-    margin-left: 30%;
-    margin-right: 30%;
+  margin-top: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background: linear-gradient(#5D6CA8, #282e49);
+  border-radius: 10px;
+  padding-top: 2%;
+}
+
+.primary-forecast-container {
     display: flex;
-    justify-content: space-around;
-    background: linear-gradient(#5D6CA8, #3A4369);
-    border-radius: 10px;
-    padding: 2%;
+    justify-content: space-around;  
+    padding-bottom: 2%;
 }
 
 .city-info-container {
@@ -59,16 +70,42 @@ img {
 }
 
 .forecast-details-container {
-    position: fixed;
-    bottom: 0;
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    background-color: #20253b;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 2%;
     padding-bottom: 2%;
+}
+
+h3 {
+  margin: 0;
+}
+
+span.details-header {
+  font-family: 'Roboto', 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  margin-bottom: 0%;
 }
 
 .wind-info-container, .humidity-info-container {
     text-align: center;
+}
+
+.details-info {
+  font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+.photo-credits-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 2%;
+  margin-bottom: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .75rem;
 }
 
 .lds-spinner {
@@ -150,3 +187,5 @@ img {
       opacity: 0;
     }
   }
+
+  
