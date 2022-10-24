@@ -86,7 +86,13 @@ export default function Forecast() {
     };
 
     
-    
+    // if (data?.name === '') {
+    //     return (
+    //         <div>
+                
+    //         </div>
+    //     )
+    // }
     
     
     if (isLoading) {

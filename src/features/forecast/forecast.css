@@ -1,9 +1,10 @@
 /* Photo by Engin Akyurt from Pexels */
 /* smoke Photo by James Wheeler from Pexels */
 .forecast-container {
-    animation: fadeIn 2s;
+    
     background-size: cover;
     height: 100vh;
+    transition: background 750ms ease-in-out 200ms;
     
 }
 
