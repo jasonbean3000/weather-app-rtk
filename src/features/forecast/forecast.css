@@ -1,16 +1,12 @@
-/* Photo by Engin Akyurt from Pexels */
-/* smoke Photo by James Wheeler from Pexels */
-.forecast-container {
-    
+.forecast-container { 
     background-size: cover;
     height: 100vh;
     transition: background 750ms ease-in-out 200ms;
-    
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .search-form-container {
@@ -20,18 +16,18 @@
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
-  margin: 1% 25% 0% 25%;
-  border-radius: 7.5px;
+    margin: 1% 25% 0% 25%;
+    border-radius: 7.5px;
 }
 
 button:hover {
-  background-color: rgb(192, 192, 186);
-  cursor: pointer;
+    background-color: rgb(192, 192, 186);
+    cursor: pointer;
 }
 
 
@@ -46,12 +42,12 @@ input {
 }
 
 .main-container {
-  margin-top: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
-  background: linear-gradient(#5D6CA8, #282e49);
-  border-radius: 10px;
-  padding-top: 2%;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background: linear-gradient(#5D6CA8, #282e49);
+    border-radius: 10px;
+    padding-top: 2%;
 }
 
 .primary-forecast-container {
@@ -97,13 +93,13 @@ img {
 }
 
 h3 {
-  margin: 0;
+    margin: 0;
 }
 
 span.details-header {
-  font-family: 'Roboto', 'Courier New', Courier, monospace;
-  font-size: 1rem;
-  margin-bottom: 0%;
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    margin-bottom: 0%;
 }
 
 .wind-info-container, .humidity-info-container {
@@ -111,18 +107,18 @@ span.details-header {
 }
 
 .details-info {
-  font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.2rem;
+    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
 }
 
 .photo-credits-container {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin-right: 2%;
-  margin-bottom: 1%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: .75rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
 }
 
 .lds-spinner {

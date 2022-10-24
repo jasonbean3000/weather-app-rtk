@@ -19,14 +19,12 @@ import thunderstormPhoto from '../../resources/images/thunderstormPhoto.jpeg'
 import drizzlePhoto from '../../resources/images/drizzlePhoto.jpeg'
 import snowPhoto from '../../resources/images/snowPhoto.jpeg'
 
-
 export default function Forecast() {
 
     const [searchTerm, setSearchTerm] = useState('')
     const [cityName, setCityName] = useState({name:"Dallas"})
     const { data, isLoading } = weatherApis.endpoints.city.useQuery(cityName.name)
     
-
     let d = new Date(data?.dt*1000);
     console.log(d)
 
@@ -40,50 +38,45 @@ export default function Forecast() {
       
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
-    
-
     console.log(data);
 
     const weatherCondition = data?.weather[0].main;
 
-    let iconImage
-
-    let photo
+    let iconImage;
+    let photo;
+    let photographer;
 
     console.log(weatherCondition);
 
     if (weatherCondition === 'Clear') {
-        iconImage = sun   
-        photo = clearPhoto 
+        iconImage = sun;  
+        photo = clearPhoto; 
+        photographer = "Brett Sayles";
     } else if (weatherCondition === 'Clouds') {
         iconImage = clouds
         photo = cloudyPhoto
+        photographer = "Engin Akyurt";
     } else if (weatherCondition === 'Thunderstorm') {
         iconImage = thunderstorm
         photo = thunderstormPhoto
+        photographer = "Greg";
     } else if (weatherCondition === 'Drizzle') {
         iconImage = drizzle
         photo = drizzlePhoto
+        photographer = "Ayşenur Sağlam";
     } else if (weatherCondition === 'Rain') {
         iconImage = rain
         photo = rainPhoto
+        photographer = "James Wheeler";
     } else if (weatherCondition === 'Snow') {
         iconImage = snow
         photo = snowPhoto
+        photographer = "James Wheeler";
     } else {
         iconImage = smoke
         photo = smokePhoto
+        photographer = "James Wheeler";
     };
-
-    
-    // if (data?.name === '') {
-    //     return (
-    //         <div>
-                
-    //         </div>
-    //     )
-    // }
-    
     
     if (isLoading) {
         return (
@@ -104,21 +97,6 @@ export default function Forecast() {
         );
       }  
 
-    
-    // const handleChange = ({ target }) => {
-    //     const {name, value} = target;
-    //     setCityName((prev) => ({
-    //         ...prev,
-    //         [name]: value
-    //     }));
-    // };
-    
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     console.log(cityName);
-    //     setCityName({ name: "" });
-    //   };
-    
     const handleChange = (event) => {
         setSearchTerm(event.target.value)
     }
@@ -174,7 +152,7 @@ export default function Forecast() {
                 </div>
             </div>
             <div className='photo-credits-container'>
-                <article>Photo by James Wheeler from Pexels</article>
+                <article>Photo by {photographer} from Pexels</article>
             </div>
         </div>
     )
