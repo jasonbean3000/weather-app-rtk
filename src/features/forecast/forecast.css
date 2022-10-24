@@ -19,6 +19,22 @@
     justify-content: center;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 1% 25% 0% 25%;
+  border-radius: 7.5px;
+}
+
+button:hover {
+  background-color: rgb(192, 192, 186);
+  cursor: pointer;
+}
+
+
 input {
     height: 2rem;
     border-radius: 10px;

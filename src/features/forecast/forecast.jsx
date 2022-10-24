@@ -19,8 +19,10 @@ import thunderstormPhoto from '../../resources/images/thunderstormPhoto.jpeg'
 import drizzlePhoto from '../../resources/images/drizzlePhoto.jpeg'
 import snowPhoto from '../../resources/images/snowPhoto.jpeg'
 
+
 export default function Forecast() {
 
+    const [searchTerm, setSearchTerm] = useState('')
     const [cityName, setCityName] = useState({name:"Dallas"})
     const { data, isLoading } = weatherApis.endpoints.city.useQuery(cityName.name)
     
@@ -37,20 +39,8 @@ export default function Forecast() {
         };
       
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
     
-    const handleChange = ({ target }) => {
-        const {name, value} = target;
-        setCityName((prev) => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-    
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(cityName);
-        setCityName({ name: "" });
-      };
 
     console.log(data);
 
@@ -115,7 +105,28 @@ export default function Forecast() {
       }  
 
     
+    // const handleChange = ({ target }) => {
+    //     const {name, value} = target;
+    //     setCityName((prev) => ({
+    //         ...prev,
+    //         [name]: value
+    //     }));
+    // };
     
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     console.log(cityName);
+    //     setCityName({ name: "" });
+    //   };
+    
+    const handleChange = (event) => {
+        setSearchTerm(event.target.value)
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setCityName({ name: searchTerm});
+    }
     
     return (
         <div 
@@ -129,9 +140,9 @@ export default function Forecast() {
                             type='text'
                             name='name'
                             placeholder='Enter Location'
-                            value={cityName.name}
                         />
                     </div>
+                    <button>Search</button>
                 </form>
             </div>
             <div className='main-container'>
@@ -162,7 +173,6 @@ export default function Forecast() {
                     </div>
                 </div>
             </div>
-            
             <div className='photo-credits-container'>
                 <article>Photo by James Wheeler from Pexels</article>
             </div>
