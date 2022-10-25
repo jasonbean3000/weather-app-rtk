@@ -45,7 +45,7 @@ input {
     margin-top: 5%;
     margin-left: 30%;
     margin-right: 30%;
-    background: linear-gradient(#5D6CA8, #282e49);
+    background: linear-gradient(rgba(93, 108, 168, .5), rgba(40, 46, 73, .75));
     border-radius: 10px;
     padding-top: 2%;
 }
@@ -119,6 +119,45 @@ span.details-header {
     margin-bottom: 1%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: .75rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .main-container {
+    margin-top: 10%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+  }
+  .primary-forecast-container {
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .primary-forecast-container h3 {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .main-container {
+    margin-top: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .main-container {
+    margin-top: 10%;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  span.details-header, span.details-info {
+    font-size: 1rem;
+  }
 }
 
 .lds-spinner {

@@ -14,7 +14,7 @@ import drizzle from '../../resources/images/drizzle.png'
 import rainPhoto from '../../resources/images/rainPhoto.png'
 import cloudyPhoto from '../../resources/images/cloudyPhoto.webp'
 import smokePhoto from '../../resources/images/smokePhoto.jpg'
-import clearPhoto from '../../resources/images/clearPhoto.webp'
+import clearPhoto from '../../resources/images/sunny.jpg'
 import thunderstormPhoto from '../../resources/images/thunderstormPhoto.jpeg'
 import drizzlePhoto from '../../resources/images/drizzlePhoto.jpeg'
 import snowPhoto from '../../resources/images/snowPhoto.jpeg'
@@ -51,7 +51,7 @@ export default function Forecast() {
     if (weatherCondition === 'Clear') {
         iconImage = sun;  
         photo = clearPhoto; 
-        photographer = "Brett Sayles";
+        photographer = "Johannes Plenio";
     } else if (weatherCondition === 'Clouds') {
         iconImage = clouds
         photo = cloudyPhoto
@@ -67,7 +67,7 @@ export default function Forecast() {
     } else if (weatherCondition === 'Rain') {
         iconImage = rain
         photo = rainPhoto
-        photographer = "James Wheeler";
+        photographer = "Mathias Reding";
     } else if (weatherCondition === 'Snow') {
         iconImage = snow
         photo = snowPhoto
@@ -75,7 +75,7 @@ export default function Forecast() {
     } else {
         iconImage = smoke
         photo = smokePhoto
-        photographer = "James Wheeler";
+        photographer = "Karol Wiśniewski";
     };
     
     if (isLoading) {
