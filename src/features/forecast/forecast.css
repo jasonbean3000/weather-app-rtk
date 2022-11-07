@@ -68,8 +68,12 @@ input {
     margin:0;
 }
 
-.city-info-container h3 {
+.city-info-container h3, .city-info-container h4 {
     margin: 0;
+}
+
+.city-info-container h4 {
+  width: 300px;
 }
 
 .weather-conditions-icon-container {
